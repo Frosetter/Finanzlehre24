@@ -1,28 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Weg – Mindset | Finanzen | Krypto</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Finanzlehre24</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #0d1b2a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #e0e1dd;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0d1b2a;
+            background-color: #e0e1dd;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: appearUp 1s forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.2s; }
+        section:nth-child(2) { animation-delay: 0.5s; }
+        section:nth-child(3) { animation-delay: 0.8s; }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0d1b2a;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes appearUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Willkommen auf meinem Weg</h1>
+        <h1>Finanzlehre24</h1>
         <nav>
             <ul>
-                <li><a href="mindset.html">Mindset</a></li>
-                <li><a href="finanzen.html">Finanzen</a></li>
-                <li><a href="krypto.html">Krypto</a></li>
+                <li><a href="#">Krypto</a></li>
+                <li><a href="#">Finanzen</a></li>
+                <li><a href="#">Wirtschaft</a></li>
+                <li><a href="#">Mindset</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
-            <h2>Über mich</h2>
-            <p>Dies ist mein persönlicher Raum für Gedanken, Lernen und Reflexion. Ich dokumentiere hier meinen Weg durch Mindset, Finanzen und die Krypto-Welt – Schritt für Schritt.</p>
+            <h2>Motivation</h2>
+            <p>Deine Finanzen, deine Freiheit – Lerne, wie du Geld intelligent anlegst und deine finanzielle Zukunft aktiv gestaltest.</p>
+        </section>
+
+        <section>
+            <h2>Ziel der Website</h2>
+            <p>Wir bieten klare und verständliche Informationen zu den Themen Finanzen, Kryptowährungen und wirtschaftliche Zusammenhänge, um dich bei deinen Entscheidungen zu unterstützen.</p>
+        </section>
+
+        <section>
+            <h2>Unsere Haltung</h2>
+            <p>Finanzbildung ist der Schlüssel zur finanziellen Unabhängigkeit. Wir glauben an Transparenz, Objektivität und praxisorientiertes Wissen.</p>
         </section>
     </main>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert(`Du hast den Bereich "${e.target.innerText}" gewählt. Inhalte folgen bald!`);
+            });
+        });
+    </script>
 </body>
+
 </html>
